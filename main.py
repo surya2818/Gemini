@@ -3,6 +3,7 @@ import requests
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 import google.generativeai as genai
+from keep_alive import keep_alive
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -73,6 +74,6 @@ def main() -> None:
 
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
-
+keep_alive()
 if __name__ == "__main__":
     main()
