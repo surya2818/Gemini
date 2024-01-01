@@ -67,7 +67,7 @@ async def handle_text_query(update: Update, context: CallbackContext) -> None:
         await update.message.reply_text("🚫 An error occurred while processing your request.")
 
 def main() -> None:
-    application = Application.builder().token("6637558055:AAGjz-q8VVtM53VdAKjSZ_2hXjsujDkKces").build()
+    application = Application.builder().token("6274264155:AAEeGJ69mEA90oXAFj_lxPP5OMZ0rgWpy00").build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text_query))
